@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+:root {
+    --gray: rgb(66, 66, 66);
+}
+
+html, body {
+    margin: 0 3%;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: whitesmoke;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.page-header picture {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.page-header picture img {
+    border-radius: 50%;
+    border: 1px solid var(--gray);
+    overflow: hidden;
+    width: 180px;
+}
+
+.page-header nav {
+    margin-top: 30px;
+}
+
+.page-header > nav > div {
+    display: none;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.page-header nav #btn-menu {
+    color: white;
+    background-color: var(--gray);
+    padding: 5%;
+    border: 0;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.page-header nav ul{
+    transition: 200ms;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-header li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    width: 13vw;
+    height: 50px;
+    text-align: center;
+    overflow: hidden;
+}
+.page-header li a {
+    background-color: var(--gray);
+    color: white;
+    text-decoration: none;
+    padding: 10%;
+}
+
+/* page banner */
+
+.page-banner picture img {
+    width: 100%;
+}
+
+/* page cards */
+
+.page-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.page-cards picture {
+    position: relative;
+}
+
+.page-cards picture a{
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+
+.page-cards picture a h3 {
+    position: absolute;
+    display: block;
+    bottom: 65px;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 2% 0;
+}
+
+.page-cards picture a img {
+    margin: 0;
+    width: 100%;
+}
+
+.page-cards .promo {
+    position: absolute;
+    bottom: 138px;
+    right: 15px;
+}
+/*
+.page-cards picture button {
+    position: absolute;
+    bottom: 90px;
+    left: 0;
+    width: 100%;
+    padding: 2% 0;
+    background-color: rgba(238, 130, 238, 0.37);
+    overflow: hidden;
+    border: none;
+    color: white;
+}
+*/
+.page-cards div {
+    margin-top: 30px;
+    width: 380px;
+}
+
+.page-cards > div > h3 {
+    margin: 0;
+}
+
+.page-cards div p {
+    margin-bottom: 30px;
+    color: rgb(117, 117, 117);
+}
+
+.page-cards > div > a {
+    display: inline-block;
+    background-color: var(--gray);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* page footer */
+
+.page-footer {
+    background-color: rgb(184, 28, 28);
+    height: 150px;
+    margin-top: 30px;
+    padding-top: 50px;
+    border-radius: 30px 30px 0 0;
+}
+
+
+.page-footer ul {
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 0;
+}
+
+.page-footer ul li {
+    width: 140px;
+    text-align: center;
+    margin: 0;
+    list-style: none;
+}
+
+.page-footer ul li:nth-child(1) {
+    border: transparent;
+}
+
+.page-footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}   
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+    html, body {
+        margin: 0 1%;
+    }
+
+    .page-cards div {
+        width: 350px;
+    }
+    
+    .page-cards .promo {
+        bottom: 123px;
+    }
+}
+
+@media (max-width: 1290px) and (min-width: 1051px) {
+    .page-cards {
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 1050px) and (min-width: 861px) {
+    .page-cards {
+        justify-content: space-between;
+    }
+
+}
+
+@media (max-width: 860px) {
+    .page-cards {
+        justify-content: space-evenly;
+    }
+
+    .page-header {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 730px) {
+    .page-header ul {
+        flex-direction: column;
+        
+    }
+    .page-header li {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .page-header > nav > div {
+        display: flex;
+    }
+
+    .page-banner {
+        display: none;
+    }
+
+    .page-footer {
+        display: flex;
+        justify-content: center;
+        height: 450px;
+    }
+
+    .page-footer ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .page-footer li {
+        padding-top: 23%;
+    }
+
+}
+
+
+@media (min-width: 731px) {
+    .page-footer li {
+        border-left: 1px solid white;
+    }
+}
+
